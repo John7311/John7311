@@ -1,0 +1,29 @@
+def Jugar (Eleccion_jugador):
+  import random
+
+  Figuras = ["Piedra", "Papel", "Tijera"]
+  
+  Puntaje_jugador = 0
+  Puntaje_maquina = 0
+
+  #while ((Puntaje_jugador < 2) and (Puntaje_maquina < 2)):
+  Eleccion_Maquina = random.choice(Figuras)
+  if(Eleccion_jugador == Eleccion_Maquina):
+    print("Empate")
+  elif ((Eleccion_jugador == "Piedra" and Eleccion_Maquina == "Tijera") or
+    (Eleccion_jugador == "Papel" and Eleccion_Maquina == "Piedra") or
+    (Eleccion_jugador == "Tijera" and Eleccion_Maquina == "Papel")):
+    #Puntaje_jugador += 1
+    print("Ganaste")
+  else:
+    Puntaje_maquina += 1
+    print("Perdiste")
+
+  #print("Jugador:" + str (Puntaje_jugador))
+  #print("Maquina:" + str (Puntaje_maquina))
+  print("Tu sacaste " + Eleccion_jugador + " y la Maquina saco " + Eleccion_Maquina)
+  print("")
+
+
+
+  
